@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+  <h2>Productos de la categoría {{ categoria.nombre }}</h2>
+
+  <ul>
+    {% for producto in productos %}
+      <li>{{ producto.nombre }} - {{ producto.descripcion }} - {{ producto.precio }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
